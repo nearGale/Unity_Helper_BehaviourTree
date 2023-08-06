@@ -1,0 +1,10 @@
+/Library
+/Logs
+/obj
+/Temp
+/.git
+/.vs
+!/Assets
+!/ProjectSettings
+!/Packages
+*.meta
