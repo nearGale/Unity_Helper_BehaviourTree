@@ -31,3 +31,4 @@ Sequence
 
 ### DecoratorNodes
 * DecoratorRepeat
+* DecoratorInvert
