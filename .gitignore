@@ -1,10 +1,6 @@
-/Library
-/Logs
-/obj
-/Temp
-/.git
-/.vs
-!/Assets
-!/ProjectSettings
-!/Packages
-*.meta
+/BehaviourTree/Library
+/BehaviourTree/Logs
+/BehaviourTree/obj
+/BehaviourTree/Temp
+/BehaviourTree/.git
+/BehaviourTree/.vs
