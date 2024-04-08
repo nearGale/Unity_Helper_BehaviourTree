@@ -32,3 +32,7 @@ Sequence
 ### DecoratorNodes
 * DecoratorRepeat
 * DecoratorInvert
+
+## BTreeBlackBoard 黑板
+可记录环境信息、树内共享信息
+### EnableRunningLog 是否打印运行时log
