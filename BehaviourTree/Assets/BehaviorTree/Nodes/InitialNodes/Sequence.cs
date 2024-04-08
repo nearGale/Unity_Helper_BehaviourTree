@@ -7,12 +7,17 @@ namespace BehaviorTree
     public class Sequence : Composite
     {
         protected int m_CurrentIdx;
+
+        public Sequence(BehaviorTree tree, string name) : base(tree, name)
+        {
+        }
+
         protected override void OnInitialize()
         {
             m_CurrentIdx = 0;
         }
 
-        protected override BTreeStatus Update()
+        protected override BTreeStatus OnUpdate()
         {
             if (m_Children == null || m_Children.Count == 0)
             {

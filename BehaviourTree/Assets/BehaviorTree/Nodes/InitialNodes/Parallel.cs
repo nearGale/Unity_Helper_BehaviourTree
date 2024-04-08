@@ -12,7 +12,7 @@ namespace BehaviorTree
             RequireAll,
         }
 
-        public Parallel(Policy success, Policy failure)
+        public Parallel(BehaviorTree tree, string name, Policy success, Policy failure) : base(tree, name)
         {
             m_SuccessPolicy = success;
             m_FailurePolicy = failure;
@@ -21,7 +21,7 @@ namespace BehaviorTree
         protected Policy m_SuccessPolicy;
         protected Policy m_FailurePolicy;
 
-        protected override BTreeStatus Update()
+        protected override BTreeStatus OnUpdate()
         {
             int successCount = 0;
             int failureCount = 0;

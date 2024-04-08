@@ -9,13 +9,13 @@ namespace BehaviorTree
         private int m_Count;
         private int m_Limit;
 
-        public DecoratorRepeat(BTreeBehavior child, int limit) : base(child)
+        public DecoratorRepeat(BehaviorTree tree, string name, BTreeBehavior child, int limit) : base(tree, name, child)
         {
             m_Limit = limit;
             m_Count = 0;
         }
 
-        protected override BTreeStatus Update()
+        protected override BTreeStatus OnUpdate()
         {
             if(m_Child == null) return BTreeStatus.Failure;
 

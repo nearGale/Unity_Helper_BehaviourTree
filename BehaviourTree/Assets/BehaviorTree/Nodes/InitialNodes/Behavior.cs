@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 namespace BehaviorTree
 {
@@ -20,23 +22,33 @@ namespace BehaviorTree
         /// <summary>
         /// 存在于的行为树
         /// </summary>
-        public BehaviorTree BTree;
+        protected BehaviorTree m_Tree;
+
+        /// <summary>
+        /// 用于辨认的名称
+        /// </summary>
+        protected string m_Name;
+
         protected virtual void OnInitialize() { }
-        protected abstract BTreeStatus Update();
+        protected virtual void PreUpdate() { }
+        protected abstract BTreeStatus OnUpdate();
+        protected virtual void PostUpdate() { }
         protected virtual void OnTerminate(BTreeStatus status) { }
 
         public BTreeStatus Status { get { return m_Status; } }
-        private BTreeStatus m_Status;
+        protected BTreeStatus m_Status;
 
-        public BTreeBehavior(BehaviorTree tree)
+        public BTreeBehavior(BehaviorTree tree, string name)
         {
-            BTree = tree;
+            m_Tree = tree;
+            m_Name = name;
             m_Status = BTreeStatus.Invalid;
         }
 
         ~BTreeBehavior()
         {
-            BTree = null;
+            m_Tree = null;
+            m_Name = null;
         }
 
         public BTreeStatus Tick()
@@ -44,14 +56,15 @@ namespace BehaviorTree
             if (IsTerminated())
                 OnInitialize();
 
-            m_Status = Update();
+            PreUpdate();
+
+            m_Status = OnUpdate();
+
+            PostUpdate();
 
             if (IsTerminated())
                 OnTerminate(m_Status);
 
-            if (BTree.BlackBoard.EnableRunningLog)
-                Debug.Log($"[BTreeNode] {GetClassType()} {m_Status}");
-            
             return m_Status;
         }
 

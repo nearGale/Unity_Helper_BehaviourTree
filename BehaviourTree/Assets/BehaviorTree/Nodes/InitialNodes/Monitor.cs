@@ -6,7 +6,7 @@ namespace BehaviorTree
 {
     public class Monitor : Parallel
     {
-        public Monitor(Policy success, Policy failure) : base(success, failure)
+        public Monitor(BehaviorTree tree, string name, Policy success, Policy failure) : base(tree, name, success, failure)
         {
 
         }

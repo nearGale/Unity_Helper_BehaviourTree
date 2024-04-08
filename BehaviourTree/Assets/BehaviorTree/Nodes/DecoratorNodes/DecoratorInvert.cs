@@ -7,11 +7,11 @@ namespace BehaviorTree
 
     public class DecoratorInvert : Decorator
     {
-        public DecoratorInvert(BTreeBehavior child) : base(child)
+        public DecoratorInvert(BehaviorTree tree, string name, BTreeBehavior child) : base(tree, name, child)
         {
         }
 
-        protected override BTreeStatus Update()
+        protected override BTreeStatus OnUpdate()
         {
             if (m_Child == null) { return BTreeStatus.Failure; }
 

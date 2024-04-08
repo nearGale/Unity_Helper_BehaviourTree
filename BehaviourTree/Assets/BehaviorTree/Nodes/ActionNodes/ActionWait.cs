@@ -8,12 +8,13 @@ namespace BehaviorTree
     {
         private float m_WaitTime = 1f;
         private float m_StartTime;
-        public ActionWait(float time)
+
+        public ActionWait(BehaviorTree tree, string name, float time) : base(tree, name)
         {
             m_WaitTime = time;
         }
 
-        protected override BTreeStatus Update()
+        protected override BTreeStatus OnUpdate()
         {
             if (m_StartTime == 0)
             {

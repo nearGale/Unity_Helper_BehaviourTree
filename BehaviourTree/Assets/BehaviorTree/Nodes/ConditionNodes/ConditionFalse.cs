@@ -6,7 +6,11 @@ namespace BehaviorTree
 {
     public class ConditionFalse : Condition
     {
-        protected override BTreeStatus Update()
+        public ConditionFalse(BehaviorTree tree, string name) : base(tree, name)
+        {
+        }
+
+        protected override BTreeStatus OnUpdate()
         {
             Debug.Log("ConditionFalse");
             return BTreeStatus.Failure;

@@ -26,14 +26,27 @@ namespace BehaviorTree
 
         public BehaviorTree()
         {
+            Init();
+        }
+
+        private void Init()
+        {
+            BlackBoard = new();
+            BlackBoard.Init();
             OnInit();
         }
 
-        public abstract void OnInit();
+        protected abstract void OnInit();
 
         public void Tick()
         {
             m_Root.Tick();
+
+            if (BlackBoard.EnableRunningLog)
+            {
+                Debug.Log(BlackBoard.GetRunningLog());
+                BlackBoard.ClearRunningLog();
+            }
         }
 
         public void Clean()

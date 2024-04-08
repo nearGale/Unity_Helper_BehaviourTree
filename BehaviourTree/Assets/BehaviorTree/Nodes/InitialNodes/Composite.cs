@@ -11,7 +11,7 @@ namespace BehaviorTree
     {
         protected List<BTreeBehavior> m_Children;
 
-        public Composite(BehaviorTree tree) : base(tree)
+        public Composite(BehaviorTree tree, string name) : base(tree, name)
         {
             m_Children = new List<BTreeBehavior>();
         }
@@ -25,6 +25,14 @@ namespace BehaviorTree
         {
             m_Children.Clear();
             m_Children = null;
+        }
+
+        protected override void PreUpdate()
+        {
+            base.PreUpdate();
+
+            if (m_Tree.BlackBoard.EnableRunningLog)
+                m_Tree.BlackBoard.AppendRunningLog($"{m_Name}({GetClassType()}) -> ");
         }
 
         public void AddChild(BTreeBehavior behavior)
