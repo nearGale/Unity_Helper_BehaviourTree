@@ -6,10 +6,8 @@ namespace BehaviorTree
 {
     public class BTreeTest : BehaviorTree
     {
-        private bool enableDebug = true;
         public override void OnInit()
         {
-            //Sequence rootSeq = new Sequence();
             Selector root = new Selector();
             Sequence seqA = new Sequence();
             Sequence seqB = new Sequence();

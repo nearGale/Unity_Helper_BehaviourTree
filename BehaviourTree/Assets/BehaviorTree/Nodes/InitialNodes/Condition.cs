@@ -6,5 +6,8 @@ namespace BehaviorTree
 {
     public abstract class Condition : BTreeBehavior
     {
+        protected Condition(BehaviorTree tree) : base(tree)
+        {
+        }
     }
 }

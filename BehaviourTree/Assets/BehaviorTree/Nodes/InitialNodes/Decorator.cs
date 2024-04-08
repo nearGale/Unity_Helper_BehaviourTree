@@ -7,7 +7,7 @@ namespace BehaviorTree
     public abstract class Decorator : BTreeBehavior
     {
         protected BTreeBehavior m_Child;
-        public Decorator(BTreeBehavior child)
+        public Decorator(BehaviorTree tree, BTreeBehavior child) : base(tree)
         {
             m_Child = child;
         }

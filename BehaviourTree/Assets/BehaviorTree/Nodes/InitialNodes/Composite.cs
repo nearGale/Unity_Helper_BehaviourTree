@@ -4,15 +4,17 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
+    /// <summary>
+    /// 组合节点（顺序节点、选择节点的基类）
+    /// </summary>
     public abstract class Composite : BTreeBehavior
     {
         protected List<BTreeBehavior> m_Children;
 
-        public Composite() : base()
+        public Composite(BehaviorTree tree) : base(tree)
         {
             m_Children = new List<BTreeBehavior>();
         }
-
 
         protected override void OnInitialize()
         {

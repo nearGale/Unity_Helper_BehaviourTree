@@ -6,5 +6,8 @@ namespace BehaviorTree
 {
     public abstract class Action : BTreeBehavior
     {
+        protected Action(BehaviorTree tree) : base(tree)
+        {
+        }
     }
 }
