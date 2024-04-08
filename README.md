@@ -23,12 +23,22 @@ Sequence
 
 ### Action 节点
 * ActionLog
-* ActionWait
+* ActionWait - 等待x秒后，返回Succeed，过程中持续Running
 
 ### Condition 节点
 * ConditionTrue
 * ConditionFalse
 
 ### DecoratorNodes
-* DecoratorRepeat
-* DecoratorInvert
+* DecoratorRepeat - 装饰器节点：多次执行
+* DecoratorInvert - 装饰器节点：取反
+
+## BTreeBlackBoard 黑板
+可记录环境信息、树内共享信息
+* EnableRunningLog - 打印运行时log，便于跟踪运行情况
+
+![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/e3321179-25fd-4dbb-8809-22f711752e77)
+
+## 树的构造
+![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/be31a8cf-ea03-4bc9-863c-7c58c0e75aaa)
+
