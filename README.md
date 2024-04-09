@@ -43,5 +43,6 @@ Sequence
 ![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/be31a8cf-ea03-4bc9-863c-7c58c0e75aaa)
 
 ## 行为树编辑器[Unity_BehaviourTreeEditor]
+可以编辑树、填入节点参数，输出Json文件，这边读取使用
 https://github.com/nearGale/Unity_BehaviourTreeEditor
 ![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/27bd9c53-abb5-4e5c-a214-728a2b665167)
