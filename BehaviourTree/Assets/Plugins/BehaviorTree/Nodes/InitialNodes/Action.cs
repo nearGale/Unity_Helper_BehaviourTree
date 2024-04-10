@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
-    public abstract class Condition : BTreeBehavior
+    public abstract class Action : Leaf
     {
-        protected Condition(BehaviorTree tree, string name) : base(tree, name)
+        public Action(BehaviorTree tree, string name, string sParam) : base(tree, name, sParam)
         {
         }
 

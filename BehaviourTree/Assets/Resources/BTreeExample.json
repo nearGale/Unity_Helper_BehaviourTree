@@ -1,0 +1,43 @@
+
+{
+    "Root" : {
+        "type" : "RootNode",
+        "children" : "A分支, B分支"
+    },
+    "A分支"  : {
+        "type" : "SequenceNode",
+        "children" : "A-打印0, A-不通过, A-打印1"
+    },
+    "A-打印0" : {
+        "type" : "ActionLog",
+        "param" : "A0"
+    },
+    "A-不通过" : {
+        "type" : "ConditionFalse",
+        "param" : null
+    },
+    "A-打印1" : {
+        "type" : "ActionLog",
+        "param" : "A1"
+    },
+    "B分支"   : {
+        "type" : "SequenceNode",
+        "children" : "B-打印0, B-通过, B-等待10秒, B-打印1"
+    },
+    "B-打印0" : {
+        "type" : "ActionLog",
+        "param" : "B0"
+    },
+    "B-通过"  : {
+        "type" : "ConditionTrue",
+        "param" : ""
+    },
+    "B-等待10秒" : {
+        "type" : "ActionWait",
+        "param" : "10"
+    },
+    "B-打印1"   : {
+        "type" : "ActionLog",
+        "param" : "B1"
+    }
+}

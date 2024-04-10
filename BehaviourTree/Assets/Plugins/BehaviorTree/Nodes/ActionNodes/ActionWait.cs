@@ -9,9 +9,18 @@ namespace BehaviorTree
         private float m_WaitTime = 1f;
         private float m_StartTime;
 
-        public ActionWait(BehaviorTree tree, string name, float time) : base(tree, name)
+        public ActionWait(BehaviorTree tree, string name, string sParam) : base(tree, name, sParam)
         {
-            m_WaitTime = time;
+        }
+
+        /// <summary>
+        /// 填入参数
+        /// </summary>
+        /// <param name="sParam">param参数</param>
+        public override void ParseParam(string sParam)
+        {
+            base.ParseParam(sParam);
+            m_WaitTime = float.Parse(sParam);
         }
 
         protected override BTreeStatus OnUpdate()

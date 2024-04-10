@@ -4,18 +4,15 @@ using UnityEngine;
 
 namespace BehaviorTree
 {
-    public class ActionLog : Action
+    public class ConditionTrue : Condition
     {
-        private string logStr = "";
-        
-        public ActionLog(BehaviorTree tree, string name, string str) : base(tree, name)
+        public ConditionTrue(BehaviorTree tree, string name, string sParam) : base(tree, name, sParam)
         {
-            logStr = str;
         }
 
         protected override BTreeStatus OnUpdate()
         {
-            Debug.Log("ActionLog" + logStr);
+            Debug.Log("ConditionTrue");
             return BTreeStatus.Success;
         }
     }
