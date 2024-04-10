@@ -49,9 +49,11 @@ https://github.com/nearGale/Unity_BehaviourTreeEditor
 
 ## 读取Json文件生成树
 Json文件放在Resources文件夹下
+
 BTreeJsonReader.ReadBTreeJson("BTreeExample");
 ![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/0d9d93b3-0bd1-42dc-be88-9f250262e7ca)
 
 ## 树快照
 Snapshot()
+
 ![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/310bfef7-98a7-471e-8026-7dbbe8dda6cf)
