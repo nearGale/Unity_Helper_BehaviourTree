@@ -46,3 +46,12 @@ Sequence
 可以编辑树、填入节点参数，输出Json文件，这边读取使用
 https://github.com/nearGale/Unity_BehaviourTreeEditor
 ![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/27bd9c53-abb5-4e5c-a214-728a2b665167)
+
+## 读取Json文件生成树
+Json文件放在Resources文件夹下
+BTreeJsonReader.ReadBTreeJson("BTreeExample");
+![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/0d9d93b3-0bd1-42dc-be88-9f250262e7ca)
+
+## 树快照
+Snapshot()
+![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/310bfef7-98a7-471e-8026-7dbbe8dda6cf)
