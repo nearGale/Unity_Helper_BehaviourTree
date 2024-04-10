@@ -86,5 +86,14 @@ namespace BehaviorTree
         {
             return this.GetType().Name;
         }
+
+        /// <summary>
+        /// 获取节点的快照，用于观察树是否结构正常
+        /// </summary>
+        /// <param name="snapshot">快照字符串</param>
+        public virtual void GetSnapshot(ref string snapshot)
+        {
+            snapshot += $"{m_Name}({this.GetType().Name})";
+        }
     }
 }

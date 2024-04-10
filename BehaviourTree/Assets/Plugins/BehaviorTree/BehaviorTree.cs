@@ -38,6 +38,16 @@ namespace BehaviorTree
 
         protected abstract void OnInit();
 
+        /// <summary>
+        /// 获取树的快照
+        /// </summary>
+        public void Snapshot()
+        {
+            string snapshot = "";
+            m_Root.GetSnapshot(ref snapshot);
+            Debug.Log(snapshot);
+        }
+
         public void Tick()
         {
             m_Root.Tick();

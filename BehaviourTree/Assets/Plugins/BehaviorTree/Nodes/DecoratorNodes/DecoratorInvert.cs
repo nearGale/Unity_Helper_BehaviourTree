@@ -7,7 +7,7 @@ namespace BehaviorTree
 
     public class DecoratorInvert : Decorator
     {
-        public DecoratorInvert(BehaviorTree tree, string name, BTreeBehavior child) : base(tree, name, child)
+        public DecoratorInvert(BehaviorTree tree, string name, BTreeBehavior child, string sParam) : base(tree, name, child, sParam)
         {
         }
 

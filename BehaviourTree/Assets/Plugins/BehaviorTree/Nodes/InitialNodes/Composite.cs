@@ -49,5 +49,18 @@ namespace BehaviorTree
         {
             m_Children.Clear();
         }
+
+        public override void GetSnapshot(ref string snapshot)
+        {
+            snapshot += m_Name + $"({this.GetType().Name})" + ":{\n";
+
+            foreach(var child in m_Children)
+            {
+                child.GetSnapshot(ref snapshot);
+                snapshot += "\n";
+            }
+
+            snapshot += "}\n";
+        }
     }
 }
