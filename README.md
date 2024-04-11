@@ -45,7 +45,8 @@ Sequence
 ## 行为树编辑器[Unity_BehaviourTreeEditor]
 可以编辑树、填入节点参数，输出Json文件，这边读取使用
 https://github.com/nearGale/Unity_BehaviourTreeEditor
-![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/27bd9c53-abb5-4e5c-a214-728a2b665167)
+![image](https://github.com/nearGale/Unity_BehaviourTree/assets/48747051/97165422-19d4-4276-bae2-0bb86c9373df)
+
 
 ## 读取Json文件生成树
 Json文件放在Resources文件夹下
